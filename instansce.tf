@@ -1,7 +1,8 @@
-resource "aws_instance" "enver-iaac" { 
+resource "aws_instance" "deployer" { 
   ami           = "ami-0a887e401f7654935" 
   instance_type = "t2.micro"
   associate_public_ip_address = "true"
+  key_name = "aws_instance.deployer.key_name"
 }
 
 
