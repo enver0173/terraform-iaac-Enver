@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "mys3tf" {
+resource "aws_s3_bucket" "b" {
     bucket = "enver-iaac-test"
     acl    = "private"
     tags   = {
