@@ -1,7 +1,7 @@
 resource "aws_instance" "deployer" { 
   ami           = var.ami
-  instance_type = "t2.micro"
-  associate_public_ip_address = "true"
+  instance_type = var.instance_type
+  associate_public_ip_address = var.associate_public_ip_address
   key_name = aws_key_pair.deployer.key_name
   user_data = file("userdata_file")
   security_groups = ["allow_tls"]
