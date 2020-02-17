@@ -1,5 +1,5 @@
 resource "aws_instance" "deployer" { 
-  ami           = "ami-0a887e401f7654935" 
+  ami           = var.ami
   instance_type = "t2.micro"
   associate_public_ip_address = "true"
   key_name = aws_key_pair.deployer.key_name
